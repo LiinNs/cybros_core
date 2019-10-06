@@ -7,6 +7,13 @@ const importAll = (r) => r.keys().map(r)
 importAll(require.context('images', false, /\.(png|jpe?g|svg)$/i));
 //importAll(require.context('@fortawesome/fontawesome-free/webfonts', false, /\.(eot|svg|ttf|woff?2)$/i));
 
+import "core-js/stable";
+import "regenerator-runtime/runtime";
+import "@stimulus/polyfills";
+
+import JQuery from 'jquery';
+window.$ = window.JQuery = JQuery;
+
 import "bootstrap";
 import "@coreui/coreui"
 

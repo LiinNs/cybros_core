@@ -5,16 +5,14 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "~> 2.6.3"
 
-gem "rails", "~> 6.0.0.rc1"
-gem "rails-i18n", "~> 6.0.0.beta1"
+gem "rails", "~> 6.0.0"
+gem "rails-i18n"
 
 # Use postgresql as the database for Active Record
-# gem "pg", ">= 0.18", "< 2.0"
-# Use sqlite as the database for Active Record
-gem "sqlite3", "~> 1.4"
+gem "pg", ">= 0.18", "< 2.0"
 
 # Use Puma as the app server
-gem "puma", "~> 3.11"
+gem "puma", "~> 4.0"
 # Use development version of Webpacker
 gem "webpacker", "~> 4.0"
 
@@ -60,6 +58,7 @@ group :development do
 
   gem "brakeman", require: false
   gem "rubocop", require: false
+  gem "rubocop-rails", require: false
   gem "rubocop-performance", require: false
 end
 
